@@ -43,7 +43,7 @@ class PokemonGoBot(object):
 
     def process_cells(self, work_on_forts=True): 
         location = self.position
-        cells = self.find_close_cells(*location) 
+        cells = self.find_close_cells(*location[0:2])
         for cell in cells:
             self.work_on_cell(cell, location, work_on_forts)
 
